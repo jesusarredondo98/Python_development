@@ -2,7 +2,7 @@
 
 El presente repositorio es para mostrar los codigos del curso de **PIP y entornos virtuales con python** 🐍
 
-### Game projecto
+### Game project
 
 Para correr el juego debes de seguir las siguientes instrucciones en la terminal
 
