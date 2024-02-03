@@ -1,11 +1,8 @@
 import requests
+import pandas as pd
+import json
 
 def get_categories():
     r = requests.get("https://api.escuelajs.co/api/v1/categories")
-    print("El status de la consulta es: " + str(r.status_code))
-    print("___________________________")
-    #print(r.text)
-    #print(type(r.text)) #Verificamos que sea string
-    categories = r.json() #Obtenemos el resultado en formato json
-    for category in categories:
-        print(category["name"])
+    categories = json.loads(r.text) #Obtenemos el resultado en formato json
+    return pd.DataFrame(categories).to_html()
